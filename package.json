@@ -1,0 +1,28 @@
+{
+  "name": "slides-manager",
+  "author": "user",
+  "version": "1.0.0",
+  "description": "An awesome project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fangj/express-tinymce.git"
+  },
+  "scripts": {
+    "start": "nowa server",
+    "build": "nowa build"
+  },
+  "homepage": "",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "~2.1.2",
+    "ejs": "^2.5.1",
+    "express-rest-resource": "0.0.1",
+    "i18n-helper": "~1.1.1",
+    "nedb": "^1.8.0",
+    "pubsub-js": "^1.5.3",
+    "react-dropzone": "^3.6.0",
+    "react-mixin": "~1.7.0",
+    "superagent": "^2.2.0",
+    "superagent-promise": "^1.1.0"
+  }
+}

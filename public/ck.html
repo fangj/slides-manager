@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>A Simple Page with CKEditor</title>
+       <script src="js/ckeditor/ckeditor.js"></script>
+      <script src='js/jquery-3.1.0.min.js'></script>
+
+    </head>
+    <body>
+        <form id="myform">
+            <textarea name="editor1" id="editor1" rows="10" cols="80">
+                This is my textarea to be replaced with CKEditor.
+            </textarea>
+             <input type="submit" value="保存"/>
+            <script>
+                CKEDITOR.replace( 'editor1' );
+            </script>
+        </form>
+        <script>
+            $("#myform").submit(function(e){
+              var data = CKEDITOR.instances.editor1.getData();
+              console.log(data);
+              return false;
+            })
+        </script>  
+    </body>
+</html>
