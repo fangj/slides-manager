@@ -16,7 +16,7 @@ class Customform extends React.Component {
            <form className="html_editor" onSubmit={this.submit.bind(this)}>
                 <textarea name="message" rows="10" cols="30" onChange={this.onChange.bind(this)} value={this.state.value}>
                 </textarea>
-                {this.props.children?<input type="submit"/>:this.props.children}
+                {this.props.children}
             </form>
         );
     }
