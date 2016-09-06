@@ -1,7 +1,8 @@
 // require('./Updater.less');
 import RestWriter from '../rest_writer';
 // import Form from "react-jsonschema-form";
-import Form from '../custom_form';
+import Form from '../keditor_form';
+// import Form from '../custom_form';
 import PubSub from 'pubsub-js';
 
 class Updater extends React.Component {

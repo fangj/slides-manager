@@ -44,6 +44,20 @@ function uploadify(app,upload_path){
 	  	res.end(ret);
 	});
 
+	app.post('/ckeditor-react/upload', upload.single('upload'), function (req, res, next) {
+		var callback = req.query["CKEditorFuncNum"];  
+		var file=req.file;
+		if(!file){
+			return res.status(400).end("no file");
+		}
+		var ret="<script type=\"text/javascript\">"+
+        	"window.parent.CKEDITOR.tools.callFunction(" + callback  
+             + ",'" +"/uploads/" + file.filename + "','')"+
+        "</script>";  
+        res.setHeader("Content-Type","text/html");
+	  	res.end(ret);
+	});
+
 	app.post('/upload', upload.array('files'), function (req, res, next) {
 		var file=req.files[0];
 		if(!file){

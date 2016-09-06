@@ -1,7 +1,8 @@
 // require('./Creater.less');
 import RestWriter from '../rest_writer';
 import PubSub from 'pubsub-js';
-import Form from '../custom_form';
+// import Form from '../custom_form';
+import Form from '../keditor_form';
 
 class Creater extends React.Component {
 

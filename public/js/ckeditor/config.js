@@ -36,6 +36,6 @@ CKEDITOR.editorConfig = function( config ) {
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
 
-	config.filebrowserImageUploadUrl= "/ckeditor/upload";
+	config.filebrowserImageUploadUrl= "/ckeditor-react/upload";
 
 };
