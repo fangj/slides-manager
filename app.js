@@ -29,6 +29,15 @@ app.get('/slides', function (req, res) {
 	})
 });
 
+app.get('/htmls', function (req, res) {
+	slidesDb.find({},function(err,slides){
+		//console.log(slides);
+		var values=slides.map(slide=>slide.value);
+		res.render('htmls', { values:values});
+	})
+});
+
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
