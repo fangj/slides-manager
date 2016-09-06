@@ -1,7 +1,7 @@
 require('./HtmlEditor.less');
 import Editor from '../editor';
 import Browser from '../browser';
-const ThumbView=(props)=><div>{props.data?props.data.value:"新建"}</div>
+const ThumbView=(props)=><div>{props.data?<span dangerouslySetInnerHTML={{__html:props.data.value}} />:"新建"}</div>
 
 class HtmlEditor extends React.Component {
 
